@@ -63,7 +63,7 @@ Offer is skipped entirely. The stated goal does not involve money, and Offer ref
 
 **Staffing:** researcher, strategist, content strategist, copywriter, editor. Designer comes in once there is a page. Email is off until there is a list. Dev is off until there is something to build. Analyst arrives after a month of publishing.
 
-Five roles out of fourteen.
+Five of the thirteen roles do the work here, plus intake and the PM. Six never run at all.
 
 ---
 
@@ -160,4 +160,4 @@ Claim removed, marker restored. Now it gets scored.
 - An unknown travelled with a marker and got caught two documents later.
 - The editor blocked the best sentence in the draft, and the block came with the next step attached.
 - Scoring took three rounds and stopped there.
-- Nine of the fourteen roles never ran.
+- Six of the thirteen roles never ran: offer, channel planner, email, designer, dev, analyst.
