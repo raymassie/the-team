@@ -21,23 +21,30 @@ Sidebar, then Customize, then Plugins, then Add Marketplace. Paste `raymassie/th
 
 ## Using it
 
-Start a conversation and say what you want. You do not name roles:
+Two ways to invoke it, and the first is the normal one.
+
+**Just talk to it.** The roles fire on their own. Claude reads the role descriptions and picks the right one, so you do not need any syntax:
 
 > I want help marketing the thing I make. Start with intake.
 
-It asks what you do, then what you want out of it, then a few more. From there the PM decides which role runs and whether anything upstream is missing first.
+It asks what you do, then what you want out of it, then a few more questions. From there the PM decides which role runs and whether anything upstream is missing first. This is how it is meant to be used, because the routing is most of the value.
 
-To call one role directly, use its name:
+**Or name a role directly.** Type a forward slash and the command list filters as you type:
 
     /the-team:intake      start over, or fill in a gap
     /the-team:researcher  check a claim or look at competitors
+    /the-team:strategist  work out positioning
     /the-team:copywriter  write a specific asset
     /the-team:editor      score and check a draft
+    /the-team:designer    set visual direction
+    /the-team:dev         build it and instrument it
     /the-team:analyst     read results once numbers exist
 
-Every role in the table below works the same way. Calling one directly skips the routing, so if it needs something that does not exist yet, it will say so and point upstream.
+Every role in the table below works this way. Calling one directly skips the routing, so if it needs something that does not exist yet it will tell you and point upstream rather than guessing.
 
-In Claude Code the team writes real files into your working folder. In the apps it hands you documents in the chat to save yourself.
+**If nothing fires**, the plugin is probably not installed on the surface you are using. Plugins install per surface, so Claude Code and the Claude apps are separate installations. Run the /plugin command to see what is actually installed where you are.
+
+In Claude Code the team writes real files into your working folder. In the apps it hands you documents in the chat for you to save.
 
 ## Using it in ChatGPT
 
