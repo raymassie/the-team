@@ -21,15 +21,17 @@ Sidebar, then Customize, then Plugins, then Add Marketplace. Paste `raymassie/th
 
 ## Using it
 
-Two ways to invoke it, and the first is the normal one.
+**Start with `/the-team`.** That loads the map: the roster, the order roles run in, and the routing rules. Then say what you want:
 
-**Just talk to it.** The roles fire on their own. Claude reads the role descriptions and picks the right one, so you do not need any syntax:
+    /the-team
 
 > I want help marketing the thing I make. Start with intake.
 
-It asks what you do, then what you want out of it, then a few more questions. From there the PM decides which role runs and whether anything upstream is missing first. This is how it is meant to be used, because the routing is most of the value.
+It asks what you do, then what you want out of it, then a few more questions. From there it works out which role runs and whether anything upstream is missing first.
 
-**Or name a role directly.** Type a forward slash and the command list filters as you type:
+You can also just describe what you want without the command. The roles fire on their own, because Claude reads their descriptions and picks. Starting with `/the-team` is more reliable, since it guarantees the routing rules are loaded before anything else happens.
+
+**Calling one role directly.** Type a forward slash and the list filters as you type:
 
     /the-team:intake      start over, or fill in a gap
     /the-team:researcher  check a claim or look at competitors
@@ -40,9 +42,9 @@ It asks what you do, then what you want out of it, then a few more questions. Fr
     /the-team:dev         build it and instrument it
     /the-team:analyst     read results once numbers exist
 
-Every role in the table below works this way. Calling one directly skips the routing, so if it needs something that does not exist yet it will tell you and point upstream rather than guessing.
+Every role in the table below works this way. Calling one directly skips the routing, so if it needs something that does not exist yet it will say so and point upstream rather than guessing.
 
-**If nothing fires**, the plugin is probably not installed on the surface you are using. Plugins install per surface, so Claude Code and the Claude apps are separate installations. Run the /plugin command to see what is actually installed where you are.
+**If nothing fires**, the plugin is probably not installed on the surface you are using. Plugins install per surface, so Claude Code and the Claude apps are separate installations. Run the /plugin command to see what is installed where you are.
 
 In Claude Code the team writes real files into your working folder. In the apps it hands you documents in the chat for you to save.
 
