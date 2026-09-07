@@ -8,22 +8,25 @@ One run through the team, condensed. The case is invented. It is here so you can
 
 **Opening message:** I fix old sewing machines. Been doing it out of my garage for six years. I want to do something with it online but I do not really know what.
 
-**Q1. What does winning look like?**
+**Q1. What do you do, or make, or know?**
+I repair pre-1970 domestic machines, mostly Singer and Bernina. People bring them in and I get them running again.
+
+**Q2. What do you want out of it?**
 I would like to stop doing local repairs. They are fiddly and people haggle. I would rather teach people to do their own.
 
-**Q2. What do you make, and who is it for?**
-I repair pre-1970 domestic machines, mostly Singer and Bernina. The people who bring them in are usually quilters who inherited a machine.
+**Q3. Who is it for?**
+Mostly quilters who inherited a machine from a relative.
 
-**Q3. What do they do instead?**
-YouTube, mostly. Or they give up and buy a plastic modern one.
+**Q4. What do they do instead?**
+YouTube. Or they give up and buy a plastic modern one.
 
-**Q5. Who else does this?**
+**Q6. Who else does this?**
 Two channels I watch. Cannot remember the names.
 
-**Q6. Realistic hours a week?**
+**Q7. Realistic hours a week?**
 Maybe four. I still have the repair work.
 
-**Q7. Budget?**
+**Q8. Budget?**
 Nothing.
 
 Read-back accepted with one correction: not trying to stop repairs entirely, only the walk-in haggling.
@@ -31,7 +34,7 @@ Read-back accepted with one correction: not trying to stop repairs entirely, onl
 ### context.md (excerpt)
 
     ## Goal
-    - Winning looks like: teaching people to fix their own machines instead of
+    - What they want: to teach people to fix their own machines instead of
       doing local walk-in repairs [confirmed]
     - Not about: quitting repair work entirely [confirmed, corrected at read-back]
 
@@ -48,17 +51,19 @@ Read-back accepted with one correction: not trying to stop repairs entirely, onl
       general YouTube repair content is the alternative. Resolves when: user
       names them, or researcher finds them.]
 
-Note what intake did not do. It did not decide this is a course business. Nobody said that.
+Two things intake did not do. It did not ask what winning looks like before the user had anything concrete on the table. And it did not decide this is a course business, because nobody said that.
 
 ---
 
 ## PM routes it
 
-The user is asking for something to publish, but no positioning exists, so this does not go to the copywriter. Furthest upstream gap is research.
+The user asked for something to publish, but no positioning exists, so this does not go to the copywriter. Furthest upstream gap is research.
 
-**Staffing:** researcher, strategist, content strategist, copywriter, editor. Email is off until there is a list. Dev is off until there is something to build. Analyst comes in after a month of publishing.
+Offer is skipped entirely. The stated goal does not involve money, and Offer refuses to run without one rather than inventing a product to sell.
 
-Five roles, not nine.
+**Staffing:** researcher, strategist, content strategist, copywriter, editor. Designer comes in once there is a page. Email is off until there is a list. Dev is off until there is something to build. Analyst arrives after a month of publishing.
+
+Five roles out of fourteen.
 
 ---
 
@@ -81,7 +86,7 @@ Five roles, not nine.
     so the failure modes are known rather than guessed. [confirmed]
 
     ## Rejected and why
-    - Cheapest repair guides: competes on price, and the goal is not revenue.
+    - Cheapest repair guides: competes on price, and money is not the goal.
     - General sewing content: the buyer is defined by an inherited machine,
       not by sewing.
 
@@ -111,27 +116,48 @@ That last row is the point of the table. It is the best line available and it ca
 
 ---
 
-## Copywriter, then editor
+## Copywriter, round one
 
-The copywriter drafts the first teardown and uses the three-fixes line, because it is the best sentence available.
+Drafts the first teardown. Uses the three-fixes line, because it is the best sentence available. Self-scores at 8 against the long-form rubric.
 
     ## Editor verdict - 2026-09-06
-    **Status:** REWRITE
+    **Status:** BLOCKED
     **Truth:** FAIL. The three-fixes claim has an unmet proof obligation.
     **Provenance:** One unmarked assertion, that quilters are the largest
       group. Entered at researcher as [assumed], lost its marker in the
       strategist document, read as fact by the time it reached the draft.
-    **Cut:** 22 percent.
+    **Score:** not scored. Truth failures block before scoring begins.
     **Blocking:** Remove the three-fixes claim or go count the repairs.
       Restore the quilter marker.
 
-The editor caught an assumption that had quietly become a fact across two handoffs. That is the failure this system exists to prevent, and it is invisible without the markers.
+Note the refusal names the next step. It does not tell the user the article is bad or that the idea will not work.
+
+## Copywriter, round two
+
+Claim removed, marker restored. Now it gets scored.
+
+    **Status:** REWRITE
+    **Score:** 6/10 (round 2 of 3)
+    | Criterion | Score | What cost the points |
+    | Reason to exist | 2/2 | Nobody else has taken this model apart in writing |
+    | Structure | 1/2 | Findable, but the fix order is buried in prose |
+    | Evidence density | 2/2 | Specific parts, specific symptoms |
+    | Voice | 1/2 | Drifts formal in the middle third |
+    | Ending | 0/1 | Recaps what was just said |
+    | Length honesty | 0/1 | Two paragraphs of setup nobody needs |
+
+## Round three
+
+7/10. Ships. The editor notes that voice is still the weakest criterion and that it is a writing habit rather than a document problem, so it goes in the notes rather than triggering a fourth round.
 
 ---
 
 ## What this run shows
 
-- The goal question changed everything. Assuming revenue would have produced a course launch nobody asked for.
-- Unknowns did not stop the work. They travelled, marked, and one got caught downstream.
-- The editor blocked the best sentence in the draft. Correct behaviour.
-- Four of the nine roles never ran.
+- Concrete question first, goal second. The user could not have answered what they wanted before describing what they do.
+- The goal was taken as given. Nobody argued that teaching people to fix their own machines is not a business model.
+- Offer skipped itself rather than inventing something to sell.
+- An unknown travelled with a marker and got caught two documents later.
+- The editor blocked the best sentence in the draft, and the block came with the next step attached.
+- Scoring took three rounds and stopped there.
+- Nine of the fourteen roles never ran.
