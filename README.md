@@ -4,58 +4,74 @@ A marketing department made of nine role skills that hand work to each other in 
 
 Most AI marketing prompt packs are personas: files that say you are a seasoned CMO with twenty years of experience. That buys nothing. This is built the other way round. Each role declares what it reads, what it produces, and what it refuses to do without. The handoffs are the product. The role names are just labels.
 
-## Install
+## Install in Claude Code
+
+Open Claude Code in any folder and run these two commands:
 
     /plugin marketplace add raymassie/the-team
     /plugin install the-team@the-team
 
-That is it. Then say what you are working on:
+The first adds this repo as a source. The second installs the plugin from it. Restart is not needed. To confirm it worked, run `/plugin` and look for the-team in the installed list.
 
-> I want help marketing [one sentence about what you are selling]. Start with intake.
+To update later, `/plugin marketplace update the-team`. To remove it, `/plugin uninstall the-team@the-team`.
 
-Works in Claude Code, and in the Claude apps under Customize, then Plugins, then Add Marketplace, then the repo above.
+## Install in the Claude apps
 
-### A note on memory
+Sidebar, then Customize, then Plugins, then Add Marketplace. Paste `raymassie/the-team` and click Sync. The plugin appears in the list. Click Install.
+
+## Using it
+
+Start a conversation and say what you want. You do not name roles:
+
+> I want help marketing the thing I make. Start with intake.
+
+It asks what you do, then what you want out of it, then a few more. From there the PM decides which role runs and whether anything upstream is missing first.
+
+To call one role directly, use its name:
+
+    /the-team:intake      start over, or fill in a gap
+    /the-team:researcher  check a claim or look at competitors
+    /the-team:copywriter  write a specific asset
+    /the-team:editor      score and check a draft
+    /the-team:analyst     read results once numbers exist
+
+Every role in the table below works the same way. Calling one directly skips the routing, so if it needs something that does not exist yet, it will say so and point upstream.
+
+In Claude Code the team writes real files into your working folder. In the apps it hands you documents in the chat to save yourself.
+
+## Using it in ChatGPT
+
+There is no plugin format for ChatGPT, so the whole system goes in as one file.
+
+1. Download `THE-TEAM-SINGLE-FILE.md` from this repo.
+2. Go to Explore GPTs, then Create, then Configure.
+3. Under Knowledge, upload that file.
+4. Paste this into Instructions:
+
+> You are The Team. The attached file contains a map and thirteen role skills. Before responding to anything, read the map section at the top in full: roster, order, routing, document handling. Follow its routing rather than answering directly. If no context has been established in this conversation, run intake first. Never skip a step. Read a role in full before acting as it.
+
+5. Save, then start a chat with it.
+
+Two differences from Claude. You cannot call a role by name, so ask for it in words. And the single file is generated from `skills/`, so if the two ever disagree, the files in `skills/` are correct.
+
+The same file works for any other assistant that takes documents.
+
+## A note on memory
 
 If Claude memory is on, it may recall things from your past conversations. Intake treats anything it did not hear from you in this conversation as a lead rather than an answer: it can ask whether something is relevant, but it will not hand you a list of things you might build and ask you to pick.
 
 If you would rather it worked from a blank slate, turn memory off in Settings before your first run.
 
-### Without the plugin
+## Nothing is saved in chat interfaces
 
-Download the repo, upload the contents of `skills/` into a Project or Custom GPT as knowledge, and paste this into the instructions box:
-
-> You are The Team. Before responding to anything, read the-team/SKILL.md in full. It is the map: roster, order, routing rules, document handling. Follow its routing rather than answering directly. If no context has been established, run intake first. Never skip a step. Read the full role file before acting as any role.
-
-Project knowledge is searched rather than read whole, so without that instruction the assistant grabs one file, misses the routing, and answers normally.
-
-### Nothing is saved
-
-Chat interfaces have no filesystem. The team hands you finished documents. Save the ones you want, and paste them back when a later step needs them. Running it in Claude Code gives you real files instead.
-
-## Calling a role directly
-
-The PM routes for you, so you normally just say what you want. If you want a specific role, call it by name:
-
-    /the-team:intake
-    /the-team:editor
-    /the-team:analyst
-
-Any role in the table below works the same way.
-
-## Works with the design plugin
-
-If you have Anthropic design plugin installed, the designer role hands structured critique and accessibility audits to it instead of doing a lighter version itself. Optional. Nothing here needs it.
-
-## How you use it
-
-You do not pick roles. Say what you want to happen and the PM works out which role should be running and whether anything upstream is missing first.
+Claude apps and ChatGPT have no filesystem. The team hands you finished documents. Save the ones you want, and paste them back when a later step needs them. Claude Code writes real files instead.
 
 ## What is in here
 
 | File | Role |
 |---|---|
 | `EXAMPLE.md` | A worked example, invented case. |
+| `THE-TEAM-SINGLE-FILE.md` | Everything in one file, for ChatGPT and others. |
 | `skills/the-team/` | The map. Chain, routing, document table. Read this first. |
 | `skills/intake/` | Fills `context.md` by asking you questions. |
 | `skills/pm/` | Front door. Routes requests, holds chain state. |
