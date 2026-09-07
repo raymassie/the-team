@@ -21,11 +21,9 @@ Sidebar, then Customize, then Plugins, then Add Marketplace. Paste `raymassie/th
 
 ## Using it
 
-**Start with `/the-team`.** That loads the map: the roster, the order roles run in, and the routing rules. Then say what you want:
+**Start with `/the-team`.** That loads the map: the roster, the order roles run in, and the routing rules. Put what you want on the same line:
 
-    /the-team
-
-> I want help marketing the thing I make. Start with intake.
+    /the-team I want help marketing the thing I make. Start with intake.
 
 It asks what you do, then what you want out of it, then a few more questions. From there it works out which role runs and whether anything upstream is missing first.
 
