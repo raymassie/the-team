@@ -1,7 +1,7 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "the-team",
-  "description": "The Team: a marketing system for people who do not have a marketing team.",
+  "description": "The Team: from not knowing what you are building to live and measured.",
   "owner": {
     "name": "Ray Massie"
   },
@@ -9,7 +9,7 @@
     {
       "name": "the-team",
       "source": "./",
-      "description": "A marketing department built as handoff contracts, not personas. Thirteen roles that each declare what they read, what they produce, and what they refuse to do without. Starts by asking what you are building and what you want out of it, marks every assumption it makes, scores drafts against rubrics, and blocks claims you cannot prove.",
+      "description": "Takes a project from not knowing what you are building to live and measured. Thirteen roles: intake and offer work out what the thing is and who pays, then research, positioning, content, campaigns, email, copy, design, build and results get it in front of people. Each role declares what it reads, what it produces, and what it refuses to do without. Asks what you want out of the project before assuming you want money, marks every assumption it makes, scores drafts against rubrics, and blocks claims you cannot prove.",
       "category": "productivity",
       "author": {
         "name": "Ray Massie"

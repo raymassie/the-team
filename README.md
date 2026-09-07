@@ -1,8 +1,12 @@
 # The Team
 
-A marketing department made of nine role skills that hand work to each other in a fixed order.
+Thirteen roles that take a project from I do not know what I am building to it is live and here is what the numbers say.
 
-Most AI marketing prompt packs are personas: files that say you are a seasoned CMO with twenty years of experience. That buys nothing. This is built the other way round. Each role declares what it reads, what it produces, and what it refuses to do without. The handoffs are the product. The role names are just labels.
+It starts by asking what you do, then what you want out of it. Money is one valid answer. Free equipment, credibility, an audience, a portfolio piece, or just enjoying it are equally valid, and each one changes what the rest of the work should be. From there it works out what is missing, in what order, and does that instead of whatever you asked for.
+
+The first half is figuring out what the thing is: what you are building, who pays, what makes it different, what gets sold. The second half is getting it in front of people: content, campaigns, email, copy, the site, the results. Same chain, one direction. Nothing later in it is allowed to invent what something earlier should have decided.
+
+Most AI marketing prompt packs are personas: files that say you are a seasoned CMO with twenty years of experience. That buys nothing. Every role here declares what it reads, what it produces, and what it refuses to do without. The handoffs are the product. The role names are labels.
 
 ## Install in Claude Code
 
