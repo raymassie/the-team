@@ -21,6 +21,20 @@ It cannot draw. It can decide what something should look like and why, in terms 
 
 Most solo projects do not need a designer. They need someone to stop them from using six fonts.
 
+## If the design plugin is available
+
+Anthropic publishes a `design` plugin for Claude Code with dedicated skills for several things this role only sketches. If it is installed, use it rather than duplicating it:
+
+- `/design:design-critique` for structured critique of a design, instead of the review step below.
+- `/design:accessibility-review` for a full WCAG audit, instead of the contrast figures stated here.
+- `/design:ux-copy` for interface microcopy: errors, empty states, onboarding. Note that marketing copy still belongs to the copywriter, against positioning and a rubric.
+- `/design:design-system` when the project has grown past one page and needs documented patterns.
+- `/design:design-handoff` when a build is going to someone other than the dev role here.
+
+Pass it the direction document as context so its output is anchored to positioning rather than to general design principle.
+
+It is not installed by default and this role works without it. Do not tell the user to install anything unless they ask what else could help.
+
 ## Process
 
 1. **Say what it should feel like, in three words**, drawn from the Voice block rather than invented. Then name what it must not feel like, which is usually more useful.

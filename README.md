@@ -33,6 +33,20 @@ Project knowledge is searched rather than read whole, so without that instructio
 
 Chat interfaces have no filesystem. The team hands you finished documents. Save the ones you want, and paste them back when a later step needs them. Running it in Claude Code gives you real files instead.
 
+## Calling a role directly
+
+The PM routes for you, so you normally just say what you want. If you want a specific role, call it by name:
+
+    /the-team:intake
+    /the-team:editor
+    /the-team:analyst
+
+Any role in the table below works the same way.
+
+## Works with the design plugin
+
+If you have Anthropic design plugin installed, the designer role hands structured critique and accessibility audits to it instead of doing a lighter version itself. Optional. Nothing here needs it.
+
 ## How you use it
 
 You do not pick roles. Say what you want to happen and the PM works out which role should be running and whether anything upstream is missing first.

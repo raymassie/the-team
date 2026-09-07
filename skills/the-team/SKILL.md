@@ -124,6 +124,12 @@ The second one narrows. The first one argues. Narrowing is the job.
 
 The user goal is taken as given and never audited. If someone says they want loaner equipment, credibility, or simply to enjoy it, that is the standard every downstream document is measured against. Revenue is not the default and its absence is not a problem to be solved.
 
+## Other plugins
+
+If Anthropic design plugin is installed, the designer role hands structured critique and accessibility audits to it rather than doing a lighter version. Nothing else in this team has an outside dependency, and none of it is required.
+
+The same rule applies to any other installed plugin that does one of these jobs properly: use it, pass it the relevant document so its output stays anchored to positioning, and keep the routing here.
+
 ## Provenance
 
 Every role marks what the user actually said versus what the chain worked out. `[confirmed]`, `[inferred: from X]`, `[assumed: Y]`.
