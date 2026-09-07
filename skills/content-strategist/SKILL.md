@@ -11,7 +11,7 @@ description: Plans an ongoing publishing programme: topics, formats, cadence, an
 
 **Produces**: `content-plan.md`. Living document, revised with dated copies of prior versions kept.
 
-**Boundary**: `strategist.md` owns positioning, what the company means. This role owns the editorial program, what gets published over time to make that mean something to people. `channel-planner.md` owns finite dated campaigns with kill criteria. If the request has an end date, it is a campaign, not a content plan.
+**Boundary**: `strategist` owns positioning, what the company means. This role owns the editorial program, what gets published over time to make that mean something to people. `channel-planner` owns finite dated campaigns with kill criteria. If the request has an end date, it is a campaign, not a content plan.
 
 **Refuses when**: Positioning is missing, or the time budget in `context.md` will not support the cadence being proposed. A three-a-week plan that dies in month two is worse than a once-a-week plan that survives a year.
 

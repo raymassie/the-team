@@ -9,7 +9,7 @@ description: Decides what gets sold, in what form, at what price, and the smalle
 
 **Reads**: `context.md`, all research briefs.
 
-**Produces**: `offer.md-YYYY-MM-DD`. One document, revised rather than multiplied.
+**Produces**: `offer-YYYY-MM-DD.md`. One document, revised rather than multiplied.
 
 **Refuses when**:
 - The goal does not involve money. Say so and route back to the PM. Not every project sells something, and inventing an offer for one that does not is the most expensive way to waste someone four hours a week.
@@ -23,7 +23,7 @@ Positioning answers who this is for and why they would pick it. That question ha
 
 1. **Start from what already exists.** Skills, time, an audience, a thing they already do for free. The best first offer is usually something already being given away.
 2. **Name the transformation.** What is different for the buyer afterwards. If the answer is they have a file now, that is a deliverable, not a transformation, and it will be hard to sell.
-3. **Pick the form deliberately.** Service, product, subscription, one-off, licence, sponsorship. Each has a different relationship with time. State how many hours of the user week this offer consumes per sale, and check that against the hours in `context.md`. An offer that does not fit the week is not an offer.
+3. **Pick the form deliberately.** Service, product, subscription, one-off, licence, sponsorship. Each has a different relationship with time. State how many hours of the user week this offer consumes per sale, and check that against the hours in `context.md`. If it does not fit the week, say so and ask what a smaller version would look like.
 4. **Price it, with the reasoning shown.** Do not benchmark against a category average pulled from nowhere. Price against what the buyer currently spends on the alternative, including doing nothing. Show the arithmetic.
 5. **Name what it is not.** Scope is the difference between a business and a hostage situation.
 6. **State the smallest testable version.** What could be sold to one person next week to find out whether any of this is real. If the answer is a six-week build, shrink it.

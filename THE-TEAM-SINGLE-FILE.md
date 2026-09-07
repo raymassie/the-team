@@ -15,7 +15,7 @@ A set of role skills that produce marketing documents through defined handoffs. 
 
 ## Hard rule
 
-No skill runs before `context.md` exists. If it does not, run `intake.md` first, always. Generic marketing output is worse than no output because it looks finished.
+No skill runs before `context.md` exists. If it does not, run `intake` first, always. Generic marketing output is worse than no output because it looks finished.
 
 A field marked UNKNOWN does not block work. It travels with a stated working assumption, and every document depending on it carries that caveat inline where a reader will actually see it. A hard stop at minute two is how people abandon the thing. A visible assumption is how they keep moving without fooling themselves.
 
@@ -23,44 +23,60 @@ A field marked UNKNOWN does not block work. It travels with a stated working ass
 
 | Role | File | Owns |
 |---|---|---|
-| Intake | `intake.md` | First contact. Fills `context.md` through conversation. |
-| Project Manager | `pm.md` | Routing and chain state. Sits above the chain, not in it. |
-| Researcher | `researcher.md` | Evidence. Competitors, buyers, verified claims. |
-| Offer | `offer.md` | What gets sold, at what price, to whom. Only when the goal involves money. |
-| Strategist | `strategist.md` | Positioning. What this means and to whom. |
-| Content Strategist | `content-strategist.md` | The ongoing publishing program. |
-| Channel Planner | `channel-planner.md` | Finite dated campaigns with kill criteria. |
-| Email Marketer | `email.md` | Email sequences: what gets sent, when, and to whom. |
-| Designer | `designer.md` | What it looks like, and why. Direction and critique, not artwork. |
-| Copywriter | `copywriter.md` | All words, everywhere. Single source of voice. |
+| Intake | `intake` | First contact. Fills `context.md` through conversation. |
+| Project Manager | `pm` | Routing and chain state. Sits above the chain, not in it. |
+| Researcher | `researcher` | Evidence. Competitors, buyers, verified claims. |
+| Offer | `offer` | What gets sold, at what price, to whom. Only when the goal involves money. |
+| Strategist | `strategist` | Positioning. What this means and to whom. |
+| Content Strategist | `content-strategist` | The ongoing publishing program. |
+| Channel Planner | `channel-planner` | Finite dated campaigns with kill criteria. |
+| Email Marketer | `email` | Email sequences: what gets sent, when, and to whom. |
+| Designer | `designer` | What it looks like, and why. Direction and critique, not artwork. |
+| Copywriter | `copywriter` | All words, everywhere. Single source of voice. |
 | Rubrics | `rubrics.md` | Scoring sheets. Read by editor and copywriter, not a role. |
-| Editor | `editor.md` | The only role that can block a ship. |
-| Dev | `dev.md` | Builds it, and makes it measurable. |
-| Analyst | `analyst.md` | What the numbers actually support. |
+| Editor | `editor` | The only role that can block a ship. |
+| Dev | `dev` | Builds it, and makes it measurable. |
+| Analyst | `analyst` | What the numbers actually support. |
 
 ## The chain
 
+The PM sits above all of this. It reads the request, finds the gap furthest upstream, and starts there.
+
 ```
-context.md
-   |
-   v
-researcher --> strategist --+--> content-strategist --+
-                   ^        |                         |
-                   |        +--> channel-planner -----+--> copywriter --> editor --> dev --> [live]
-                   |        |                         |                                        |
-                   |        +--> email ---------------+                                        |
-                   |                                                                           v
-                   +---------------------------- analyst <--------------------------------------+
+intake  ->  context.md
+                |
+                v
+          researcher  ->  [offer]  ->  strategist
+                                            |
+              +-----------------------------+-----------------------------+
+              |                             |                             |
+              v                             v                             v
+      content-strategist            channel-planner                     email
+              |                             |                             |
+              +-----------------------------+-----------------------------+
+                                            |
+                                 copywriter + designer
+                                            |
+                                            v
+                                          editor
+                                            |
+                                            v
+                                           dev  ->  [live]
+                                            |
+                                            v
+                                         analyst
+                                            |
+                                            v
+                                     back to strategist
 ```
+
+Offer only appears when the goal involves money. When it does not, it is skipped entirely and the strategist works from what already exists.
 
 Three planning roles feed one copywriter. That is deliberate: one voice, three reasons to speak.
-
-Offer runs before positioning when money is the goal, because the strategist cannot position a thing that has not been decided. When money is not the goal, offer never runs at all.
 
 Designer sits beside the copywriter, reading the same positioning. Words and appearance are the same layer and they fail together when they disagree.
 
 Nothing skips a link. If positioning does not exist, the copywriter does not guess it. If the editor has not passed it, dev does not build it. The loop only closes because dev instruments what the analyst needs.
-
 
 ## Document handling
 
@@ -68,9 +84,9 @@ There is no filesystem. Documents are chat output.
 
 Produce each one as a complete, self-contained markdown document the user can copy out, headed with the filename it would have had. Never claim to have saved a file.
 
-At the end of any step that produces an document, tell the user to save it somewhere if they want it to persist.
+At the end of any step that produces a document, tell the user to save it somewhere if they want it to persist.
 
-When a role needs to read an document from an earlier step, ask the user to paste it back, naming it. Do not reconstruct it from memory of an earlier message in a long conversation, and do not proceed without an document a role declares as a required read. Half-remembered positioning is how the chain rots quietly.
+When a role needs to read a document from an earlier step, ask the user to paste it back, naming it. Do not reconstruct it from memory of an earlier message in a long conversation, and do not proceed without a document a role declares as a required read. Half-remembered positioning is how the chain rots quietly.
 
 ## Documents
 
@@ -88,13 +104,13 @@ Each role produces one named document. Naming below, so the user can keep them s
 | copywriter | Copy assets | `copy-YYYY-MM-DD-[asset].md` |
 | editor | Verdict, inline | appends SHIP / REWRITE / BLOCKED to the copy file |
 | dev | Software plus build record | `build-YYYY-MM-DD-[thing].md` |
-| analyst | Performance results review | `results-YYYY-MM-DD.md` |
+| analyst | Results review | `results-YYYY-MM-DD.md` |
 | pm | Chain state | `status.md` (overwritten, always current) |
 | intake | Filled context | `context.md` (the only role that writes it) |
 
 ## Routing
 
-Owned by `pm.md`, which is the front door for every request. The user states an outcome, not a role. Route by what document is missing furthest upstream:
+Owned by `pm`, which is the front door for every request. The user states an outcome, not a role. Route by what document is missing furthest upstream:
 
 - No `positioning.md`: start at researcher.
 - Goal involves money and nothing is decided about what is sold: offer, before strategist.
@@ -510,7 +526,7 @@ description: Decides what gets sold, in what form, at what price, and the smalle
 
 **Reads**: `context.md`, all research briefs.
 
-**Produces**: `offer.md-YYYY-MM-DD`. One document, revised rather than multiplied.
+**Produces**: `offer-YYYY-MM-DD.md`. One document, revised rather than multiplied.
 
 **Refuses when**:
 - The goal does not involve money. Say so and route back to the PM. Not every project sells something, and inventing an offer for one that does not is the most expensive way to waste someone four hours a week.
@@ -524,7 +540,7 @@ Positioning answers who this is for and why they would pick it. That question ha
 
 1. **Start from what already exists.** Skills, time, an audience, a thing they already do for free. The best first offer is usually something already being given away.
 2. **Name the transformation.** What is different for the buyer afterwards. If the answer is they have a file now, that is a deliverable, not a transformation, and it will be hard to sell.
-3. **Pick the form deliberately.** Service, product, subscription, one-off, licence, sponsorship. Each has a different relationship with time. State how many hours of the user week this offer consumes per sale, and check that against the hours in `context.md`. An offer that does not fit the week is not an offer.
+3. **Pick the form deliberately.** Service, product, subscription, one-off, licence, sponsorship. Each has a different relationship with time. State how many hours of the user week this offer consumes per sale, and check that against the hours in `context.md`. If it does not fit the week, say so and ask what a smaller version would look like.
 4. **Price it, with the reasoning shown.** Do not benchmark against a category average pulled from nowhere. Price against what the buyer currently spends on the alternative, including doing nothing. Show the arithmetic.
 5. **Name what it is not.** Scope is the difference between a business and a hostage situation.
 6. **State the smallest testable version.** What could be sold to one person next week to find out whether any of this is real. If the answer is a six-week build, shrink it.
@@ -633,7 +649,7 @@ description: Plans an ongoing publishing programme: topics, formats, cadence, an
 
 **Produces**: `content-plan.md`. Living document, revised with dated copies of prior versions kept.
 
-**Boundary**: `strategist.md` owns positioning, what the company means. This role owns the editorial program, what gets published over time to make that mean something to people. `channel-planner.md` owns finite dated campaigns with kill criteria. If the request has an end date, it is a campaign, not a content plan.
+**Boundary**: `strategist` owns positioning, what the company means. This role owns the editorial program, what gets published over time to make that mean something to people. `channel-planner` owns finite dated campaigns with kill criteria. If the request has an end date, it is a campaign, not a content plan.
 
 **Refuses when**: Positioning is missing, or the time budget in `context.md` will not support the cadence being proposed. A three-a-week plan that dies in month two is worse than a once-a-week plan that survives a year.
 
@@ -688,7 +704,7 @@ description: Plans a finite dated campaign with one primary metric and a kill cr
 
 **Produces**: `campaign-YYYY-MM-DD-[name].md`
 
-**Refuses when**: Time budget in `context.md` is blank. A channel plan that ignores how many hours actually exist is fiction, and fiction is how three channels get started and none get finished.
+**Refuses when**: Time budget in `context.md` is blank. Ask for the realistic number first. A plan built on hours that do not exist is how three channels get started and none get finished.
 
 ## Process
 
@@ -724,7 +740,7 @@ Mark anything in this document the user did not say, at the point where it appea
 
 Never let an assumption harden into a fact by being restated in a later document without its marker. If a marker is missing upstream, ask rather than deciding it was confirmed.
 
-**Quality standard**: If the plan would collapse a busy week, it is not a plan. Build for the realistic week, not the good one.
+**Quality standard**: If the plan would collapse in a busy week, cut it until it survives one. Build for the realistic week, not the good one.
 
 ---
 
@@ -742,7 +758,7 @@ description: Designs email sequences: what triggers entry, what each email does,
 **Produces**: `sequence-YYYY-MM-DD-[name].md`
 
 **Refuses when**:
-- There is no list and no capture mechanism live. Designing a nurture sequence for zero subscribers is theatre. Route to dev for capture first.
+- There is no list and no capture mechanism live. A sequence with no subscribers has nothing to run against. Route to dev for capture first, then come back.
 - Asked to write the emails. Sequence architecture is this role. Copy comes from the copywriter against the same positioning, so voice stays single-sourced.
 
 ## Process
@@ -750,7 +766,7 @@ description: Designs email sequences: what triggers entry, what each email does,
 1. Name the sequence job in one line: what state is the reader in when they enter, and what state should they be in when they exit.
 2. Define entry trigger, exit condition, and rules for who gets excluded. A subscriber in two sequences at once is a bug.
 3. Map the sequence: email number, timing gap, single job of that email, single action. If an email has no job distinct from its neighbours, cut it.
-4. Split the list only where the message would actually differ. Splitting a list without changing the message is busywork.
+4. Split the list only where the message would actually differ. If the message would be identical, keep the list whole.
 5. Specify copy slots and hand them to the copywriter as named assets.
 6. Will it actually arrive: authentication in place, list acquisition legitimate, unsubscribe honoured, sending reputation not being torched by a cold list.
 7. Define the metric per email and for the sequence overall. Open rate is not a metric, it is a rumour. Use replies, clicks to a tracked destination, and the campaign primary metric.

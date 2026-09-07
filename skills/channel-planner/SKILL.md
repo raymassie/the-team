@@ -11,7 +11,7 @@ description: Plans a finite dated campaign with one primary metric and a kill cr
 
 **Produces**: `campaign-YYYY-MM-DD-[name].md`
 
-**Refuses when**: Time budget in `context.md` is blank. A channel plan that ignores how many hours actually exist is fiction, and fiction is how three channels get started and none get finished.
+**Refuses when**: Time budget in `context.md` is blank. Ask for the realistic number first. A plan built on hours that do not exist is how three channels get started and none get finished.
 
 ## Process
 
@@ -47,4 +47,4 @@ Mark anything in this document the user did not say, at the point where it appea
 
 Never let an assumption harden into a fact by being restated in a later document without its marker. If a marker is missing upstream, ask rather than deciding it was confirmed.
 
-**Quality standard**: If the plan would collapse a busy week, it is not a plan. Build for the realistic week, not the good one.
+**Quality standard**: If the plan would collapse in a busy week, cut it until it survives one. Build for the realistic week, not the good one.
