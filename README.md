@@ -133,4 +133,4 @@ It will not invent numbers. It will not make a claim you have no proof for. It w
 
 ## Licence
 
-MIT.
+MIT. See [COLOPHON.md](COLOPHON.md) for design decisions, influences, and source credits.
