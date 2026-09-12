@@ -1,5 +1,5 @@
 ---
-name: the-team
+name: crucible
 description: The map for Crucible, a system that takes a project from working out what you are building through to publishing it and reading the results. Read this first before acting as any role. Contains the roster, the order roles run in, routing rules, the write-and-score loop, and how documents are handled. Use at the start of any marketing request.
 ---
 
@@ -28,6 +28,7 @@ A field marked UNKNOWN does not block work. It travels with a stated working ass
 | Designer | `designer` | What it looks like, and why. Direction and critique, not artwork. |
 | Copywriter | `copywriter` | All words, everywhere. Single source of voice. |
 | Rubrics | `rubrics.md` | Scoring sheets. Read by editor and copywriter, not a role. |
+| Voices | `voices.md` | Behavioral heuristics from the Influence Atlas. Read by copywriter, editor, strategist. Not a role. |
 | Editor | `editor` | The only role that can block a ship. |
 | Dev | `dev` | Builds it, and makes it measurable. |
 | Analyst | `analyst` | What the numbers actually support. |
@@ -110,6 +111,7 @@ Owned by `pm`, which is the front door for every request. The user states an out
 - Goal involves money and nothing is decided about what is sold: offer, before strategist.
 - Goal does not involve money: skip offer entirely.
 - Something will be seen and there is no visual direction: designer, alongside copywriter.
+- Positioning is being written for the first time on a high-stakes project, or an existing positioning is under real dispute: strategist runs in council mode. See that role's Council mode section. This is a mode, not a separate role, and it is the exception rather than the default.
 - Positioning exists, request has an end date: channel-planner.
 - Positioning exists, request is ongoing publishing: content-strategist.
 - Request involves a list or lifecycle: email.

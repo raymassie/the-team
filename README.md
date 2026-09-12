@@ -8,16 +8,26 @@ The first half is figuring out what the thing is: what you are building, who pay
 
 Most AI marketing prompt packs are personas: files that say you are a seasoned CMO with twenty years of experience. That buys nothing. Every role here declares what it reads, what it produces, and what it refuses to do without. The handoffs are the product. The role names are labels.
 
+## Why this instead of the alternatives
+
+The default choice in this space is [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills) (49k+ stars). The most architecturally serious one is [alirezarezvani/claude-skills](https://github.com/alirezarezvani/claude-skills) (25k+ stars), which adds deterministic routing and policy gates written in Python. Full research, with the rest of the field, in [COLOPHON.md](COLOPHON.md).
+
+Neither tracks whether a claim survives contact with what you actually said. The default choice shares one context file across skills but has no hard refusal gate, so a role can write past a gap in what's known. The Python-gated one stops a role from firing out of order, which is real and useful, but a policy gate checks whether the right role ran, not whether the fact it used was ever true. It will pass through a number invented three documents upstream without noticing, because nothing in it is watching for that specifically.
+
+That is the one thing only this repo says: every load-bearing fact gets marked `[confirmed]`, `[inferred: from X]`, or `[assumed: Y]` at the point it enters the chain, the marker is required to survive every handoff, and the editor's job includes checking for markers that went missing along the way. Swap in either alternative's name and "this system tells you which parts of your ad copy nobody actually confirmed" stops being true.
+
+What this repo is explicitly not claiming: more skills than the field, or Python-level determinism in how roles get invoked. [alirezarezvani/claude-skills](https://github.com/alirezarezvani/claude-skills) beats it on both. Thirteen roles, chained by hand-written routing rules a model follows rather than code that enforces them, is the trade this project made on purpose, in exchange for a provenance model none of the alternatives have.
+
 ## Install in Claude Code
 
 Open Claude Code in any folder and run these two commands:
 
     /plugin marketplace add raymassie/crucible
-    /plugin install crucible@the-team
+    /plugin install crucible@crucible
 
-The first adds this repo as a source. The second installs the plugin from it. Restart is not needed. To confirm it worked, run `/plugin` and look for the-team in the installed list.
+The first adds this repo as a source. The second installs the plugin from it. Restart is not needed. To confirm it worked, run `/plugin` and look for crucible in the installed list.
 
-To update later, `/plugin marketplace update the-team`. To remove it, `/plugin uninstall the-team@the-team`.
+To update later, `/plugin marketplace update crucible`. To remove it, `/plugin uninstall crucible@crucible`.
 
 ## Install in the Claude apps
 
@@ -25,24 +35,24 @@ Sidebar, then Customize, then Plugins, then Add Marketplace. Paste `raymassie/cr
 
 ## Using it
 
-**Start with `/the-team`.** That loads the map: the roster, the order roles run in, and the routing rules. Put what you want on the same line:
+**Start with `/crucible`.** That loads the map: the roster, the order roles run in, and the routing rules. Put what you want on the same line:
 
-    /the-team I want help marketing the thing I make. Start with intake.
+    /crucible I want help marketing the thing I make. Start with intake.
 
 It asks what you do, then what you want out of it, then a few more questions. From there it works out which role runs and whether anything upstream is missing first.
 
-You can also just describe what you want without the command. The roles fire on their own, because Claude reads their descriptions and picks. Starting with `/the-team` is more reliable, since it guarantees the routing rules are loaded before anything else happens.
+You can also just describe what you want without the command. The roles fire on their own, because Claude reads their descriptions and picks. Starting with `/crucible` is more reliable, since it guarantees the routing rules are loaded before anything else happens.
 
 **Calling one role directly.** Type a forward slash and the list filters as you type:
 
-    /the-team:intake      start over, or fill in a gap
-    /the-team:researcher  check a claim or look at competitors
-    /the-team:strategist  work out positioning
-    /the-team:copywriter  write a specific asset
-    /the-team:editor      score and check a draft
-    /the-team:designer    set visual direction
-    /the-team:dev         build it and instrument it
-    /the-team:analyst     read results once numbers exist
+    /crucible:intake      start over, or fill in a gap
+    /crucible:researcher  check a claim or look at competitors
+    /crucible:strategist  work out positioning
+    /crucible:copywriter  write a specific asset
+    /crucible:editor      score and check a draft
+    /crucible:designer    set visual direction
+    /crucible:dev         build it and instrument it
+    /crucible:analyst     read results once numbers exist
 
 Every role in the table below works this way. Calling one directly skips the routing, so if it needs something that does not exist yet it will say so and point upstream rather than guessing.
 
@@ -54,7 +64,7 @@ In Claude Code the team writes real files into your working folder. In the apps 
 
 There is no plugin format for ChatGPT, so the whole system goes in as one file.
 
-1. Download `THE-TEAM-SINGLE-FILE.md` from this repo.
+1. Download `CRUCIBLE-SINGLE-FILE.md` from this repo.
 2. Go to Explore GPTs, then Create, then Configure.
 3. Under Knowledge, upload that file.
 4. Paste this into Instructions:
@@ -82,8 +92,8 @@ Claude apps and ChatGPT have no filesystem. The team hands you finished document
 | File | Role |
 |---|---|
 | `EXAMPLE.md` | A worked example, invented case. |
-| `THE-TEAM-SINGLE-FILE.md` | Everything in one file, for ChatGPT and others. |
-| `skills/the-team/` | The map. Chain, routing, document table. Read this first. |
+| `CRUCIBLE-SINGLE-FILE.md` | Everything in one file, for ChatGPT and others. |
+| `skills/crucible/` | The map. Chain, routing, document table. Read this first. |
 | `skills/intake/` | Fills `context.md` by asking you questions. |
 | `skills/pm/` | Front door. Routes requests, holds chain state. |
 | `skills/researcher/` | Evidence. Competitors, buyers, verified claims. |
@@ -94,11 +104,12 @@ Claude apps and ChatGPT have no filesystem. The team hands you finished document
 | `skills/email/` | Sequence architecture and lifecycle. |
 | `skills/designer/` | What it looks like and why. Direction, not artwork. |
 | `skills/copywriter/` | All words. Single source of voice. |
-| `skills/the-team/rubrics.md` | Scoring sheets for each asset type. |
+| `skills/crucible/rubrics.md` | Scoring sheets for each asset type. |
+| `skills/crucible/voices.md` | Behavioral heuristics per role, from the Influence Atlas. Read by copywriter, editor, strategist. |
 | `skills/editor/` | The only role that can block a ship. |
 | `skills/dev/` | Builds it, and makes it measurable. |
 | `skills/analyst/` | What the numbers actually support. |
-| `skills/the-team/context.md` | Your situation. Written by intake, read by everyone. |
+| `skills/crucible/context.md` | Your situation. Written by intake, read by everyone. |
 
 
 ## See it run

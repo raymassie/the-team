@@ -1,6 +1,6 @@
 # Colophon
 
-How The Team was built, what it draws from, and who deserves credit.
+How Crucible was built, what it draws from, and who deserves credit.
 
 ---
 
@@ -24,6 +24,9 @@ The Atlas profiles the roles draw from, and what specifically they take:
 | Researcher | Daniel Kahneman, Nassim Nicholas Taleb | Kahneman: mark what you know versus what you assumed, systematic doubt before confidence; Taleb: ask what would break this if the consensus assumption is wrong |
 | Analyst | Charlie Munger | Inversion thinking: not "did this work" but "what would have to be true for this to have failed deliberately"; avoiding stupidity over seeking brilliance; blunt without hedging |
 | PM | David Ogilvy | Research-driven, systematic, institutionally minded; build incrementally with checks at each stage; the chain holds because someone is watching it |
+| Strategist (council mode) | Seth Godin, Dan Kennedy, Theodore Levitt | Godin: remarkable or invisible, distrust positioning that offends no one; Kennedy: direct-response discipline, every claim tied to a specific buyer taking a specific action; Levitt: marketing myopia, define by the job the buyer hires the product to do rather than by the product category |
+
+The full heuristics, with sources, live in `skills/crucible/voices.md`. The table above is the summary; that file is what the roles actually read.
 
 The Atlas data is used to inform behavioral heuristics and reasoning patterns, not to impersonate these individuals. The role files describe how a person with these documented patterns would approach the work, not what that person would say.
 
@@ -33,7 +36,7 @@ The Influence Atlas is licensed separately. Commercial use requires written perm
 
 ## Research
 
-The competitive landscape analysis that informed the positioning of The Team was conducted in September 2026 against the following repositories. All findings are source-anchored; star counts are point-in-time as of that date.
+The competitive landscape analysis that informed the positioning of Crucible was conducted in September 2026 against the following repositories. All findings are source-anchored; star counts are point-in-time as of that date.
 
 | Repository | Stars | Notes |
 |---|---|---|
@@ -44,7 +47,7 @@ The competitive landscape analysis that informed the positioning of The Team was
 | [louisblythe/Sales-Skills](https://github.com/louisblythe/Sales-Skills) | 112 | Fork of coreyhaines31; stalled circa January 2026 |
 | [Salesably/salesably-marketplace](https://github.com/Salesably/salesably-marketplace) | 37 | Maintained; 10 marketing + 9 sales skills |
 
-The gap identified: no repository in the ecosystem marks confirmed facts versus assumptions versus inferences inside deliverables. No repository has handoff contracts between marketing roles with defined inputs, outputs, and acceptance criteria. The Team was built to fill both.
+The gap identified: no repository in the ecosystem marks confirmed facts versus assumptions versus inferences inside deliverables. No repository has handoff contracts between marketing roles with defined inputs, outputs, and acceptance criteria. Crucible was built to fill both.
 
 ---
 

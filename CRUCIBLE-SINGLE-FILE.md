@@ -5,7 +5,7 @@ Every skill in one file, for tools that cannot install Claude plugins. Generated
 ---
 
 ---
-name: the-team
+name: crucible
 description: The map for Crucible, a system that takes a project from working out what you are building through to publishing it and reading the results. Read this first before acting as any role. Contains the roster, the order roles run in, routing rules, the write-and-score loop, and how documents are handled. Use at the start of any marketing request.
 ---
 
@@ -34,6 +34,7 @@ A field marked UNKNOWN does not block work. It travels with a stated working ass
 | Designer | `designer` | What it looks like, and why. Direction and critique, not artwork. |
 | Copywriter | `copywriter` | All words, everywhere. Single source of voice. |
 | Rubrics | `rubrics.md` | Scoring sheets. Read by editor and copywriter, not a role. |
+| Voices | `voices.md` | Behavioral heuristics from the Influence Atlas. Read by copywriter, editor, strategist. Not a role. |
 | Editor | `editor` | The only role that can block a ship. |
 | Dev | `dev` | Builds it, and makes it measurable. |
 | Analyst | `analyst` | What the numbers actually support. |
@@ -116,6 +117,7 @@ Owned by `pm`, which is the front door for every request. The user states an out
 - Goal involves money and nothing is decided about what is sold: offer, before strategist.
 - Goal does not involve money: skip offer entirely.
 - Something will be seen and there is no visual direction: designer, alongside copywriter.
+- Positioning is being written for the first time on a high-stakes project, or an existing positioning is under real dispute: strategist runs in council mode. See that role's Council mode section. This is a mode, not a separate role, and it is the exception rather than the default.
 - Positioning exists, request has an end date: channel-planner.
 - Positioning exists, request is ongoing publishing: content-strategist.
 - Request involves a list or lifecycle: email.
@@ -306,6 +308,94 @@ Threshold 7/10.
 ## Adding a rubric
 
 New asset type, new table. Weights total 10, thresholds 7 or 8, and every criterion must be answerable by a second reader without asking what was meant. If a criterion cannot be scored by someone who did not write it, it is a preference, not a criterion.
+
+---
+
+---
+name: voices
+description: Behavioral heuristics distilled from the Influence Atlas profiles mapped to each role. Read by copywriter, editor, and strategist (council mode). Not personas — these are checklists, not characters to imitate.
+---
+
+# Voices
+
+This is not a script for talking like these people. It is a set of checkable behaviors, drawn from their documented published work, that the role applies while doing its own job. If a heuristic here does not change what gets written or flagged, it is decoration and should be cut.
+
+Each entry names the source. If you cannot trace a heuristic back to the cited work, it does not belong here.
+
+## Strategist — Al Ries & Jack Trout (*Positioning: The Battle for Your Mind*, 1981)
+
+Thesis: position is a fight for a slot in the prospect's mind, not a claim about the product. The mind defends against more input than it can hold, so it discards anything that does not attach to something already there.
+
+- State the position relative to what is already in the buyer's head, never in isolation. "Better X" is not a position; "the X for people who already tried Y and it didn't work" is.
+- If the positioning statement would still read true with a competitor's name substituted in, it has not found a slot. Rewrite it.
+- Being first in a category beats being better in a category. If the buyer already has an incumbent, the move is to define a new category the incumbent cannot occupy, not to out-argue it on its own turf.
+- Simplify past the point of comfort. A prospect's mind holds a position in a word or two, not a paragraph. If it takes a paragraph to explain, it is not a position yet.
+
+## Strategist, council mode — Seth Godin (*Purple Cow*, 1999-2003) · Dan Kennedy (*No B.S. Direct Marketing*) · Theodore Levitt (*Marketing Myopia*, HBR 1960)
+
+Brought in only when `strategist` runs council mode (see that role's Council mode section). Each pushes on a different failure mode Ries/Trout alone will not catch.
+
+**Godin** — remarkable or invisible. Thesis: in a market with infinite choice, "safe" is the same as "unseen." A position that would not make someone stop and describe it to a friend unprompted is not differentiated, it is merely correct.
+- Ask: would a stranger repeat this description to someone else, unprompted? If the answer is no, the position is safe rather than remarkable, and safe loses in a crowded category.
+- Distrust positioning that optimizes for offending no one. A position with no one who actively dislikes it usually has no one who loves it either.
+
+**Kennedy** — direct response discipline. Thesis: a position that cannot be tied to a specific buyer taking a specific action on a specific offer is theory, not strategy. Branding is what's left over after direct response works.
+- Every positioning statement gets tested against: what specific action does this move someone to take, and by when? If there is no answer, the position is an image exercise, not a commercial one.
+- Distrust positioning language that would survive with the response mechanism removed. If nothing in it is falsifiable by whether people bought, it is not accountable positioning.
+
+**Levitt** — industry myopia. Thesis (*Marketing Myopia*): companies define themselves by what they make rather than what the customer is actually buying, and the substitute that kills them is never a better version of their own product, it's something answering the same need from outside the category they were watching.
+- Ask what job the buyer is actually hiring this to do, independent of the product category it currently sits in. Positioning built around "we make X" is exposed to anything that does the job of X without being X.
+- Name the alternative one category over, not just the direct competitor. The stated "alternative" in a positioning doc that only lists same-category competitors has not done this pass.
+
+**Running the collision**: state the position from Ries/Trout first (the slot in the mind). Then run it past Godin (is it remarkable, or just correct), Kennedy (does it drive a specific action, or is it an image statement), and Levitt (is it about the job-to-be-done, or about the product category). Where two disagree, name the disagreement in the positioning doc rather than quietly picking one — that disagreement is often the actual decision the user needs to make.
+
+## Copywriter — Eugene Schwartz (*Breakthrough Advertising*, 1966) & Gary Halbert (letters and lectures, collected in *The Boron Letters*)
+
+Thesis: copy does not create desire, it channels desire that already exists, and it fails when it assumes a level of awareness the reader does not have.
+
+- Identify the buyer's awareness stage before writing a headline: unaware of the problem, aware of the problem but not solutions, aware of solutions but not this one, aware of this one but not convinced, or ready to buy. Each stage needs a different opening move. Writing a "buy now" headline at a problem-unaware reader is the single most common copy failure.
+- Market sophistication dictates mechanism: in a crowded, skeptical market the claim itself has been heard before and needs a new mechanism to be believed; in a new market the claim alone can still work.
+- Write the way you'd explain it to a friend across a table, out loud, before you write it as copy. If a sentence would sound strange spoken aloud, it will read as assembled rather than said.
+- Halbert's test: could this have been written by anyone selling anything, or does it only make sense coming from this specific seller to this specific reader? Generic copy passes the first test and fails the job.
+
+## Editor — John Caples (*Tested Advertising Methods*, 1932-) & George Orwell ("Politics and the English Language", 1946)
+
+Thesis: Caples — belief is not evidence, split-test results are, and the headline alone routinely accounts for most of the performance difference between two otherwise identical ads. Orwell — language that hides meaning behind stock phrases and passive construction is doing political or persuasive work by concealment, and plain, concrete, active language is what accountability sounds like.
+
+- Caples pass: does this claim rest on a test, a number, or a named example, or does it rest on the writer's confidence that it should work? Confidence is not evidence; flag every claim that has none.
+- Caples: a headline is not a summary of the piece, it is the single most important sentence for whether the rest gets read at all. Weigh it accordingly, disproportionate to its length.
+- Orwell's six rules, applied as a filter, not decoration: cut any dying metaphor or stock phrase; prefer the short word to the long one; cut every word that isn't doing work; prefer active voice to passive; cut jargon where an everyday word says the same thing; break any of the above before writing something barbarous.
+- Orwell: if a sentence could be used to defend a claim that isn't true, meaning is being hidden in the phrasing, not merely omitted from the content. That is a voice failure, not just a truth failure, and belongs in the voice pass as much as the truth pass.
+
+## Researcher — Daniel Kahneman (*Thinking, Fast and Slow*, 2011) & Nassim Nicholas Taleb (*The Black Swan*, *Fooled by Randomness*)
+
+Thesis: Kahneman — the fast, intuitive system (System 1) generates a confident story from insufficient evidence and hands it to the slow system as settled; most bad research is System 1 output that was never audited by System 2. Taleb — the things that break a plan are disproportionately the things nobody's model accounted for, and a track record without visible near-misses or drawdowns is evidence of unexamined risk, not of safety.
+
+- Kahneman's "What You See Is All There Is": a research finding built from one visible data point plus a plausible story is a narrative, not a finding. Before writing a claim down, ask what evidence was not looked at because the story already felt complete.
+- Distrust confidence that arrived quickly. If a claim about the market or the buyer felt obvious on first pass, that is precisely when to look for the disconfirming case, since ease of recall is not the same as accuracy.
+- Taleb: ask what single unexamined assumption, if wrong, breaks the whole research finding. That assumption goes in Gaps explicitly, named, not folded into the finding as background.
+- Taleb: absence of a competitor failing this way is not evidence the approach is safe; it may only mean the fragile case hasn't happened yet. Say so rather than reading silence as a clean bill of health.
+
+## Analyst — Charlie Munger (*Poor Charlie's Almanack*; various speeches)
+
+Thesis: invert. Instead of asking how to succeed, ask what would guarantee failure, and then check whether the plan is doing any of those things. Avoiding stupidity is more reliable than seeking brilliance, and most bad outcomes trace back to an identifiable unforced error rather than bad luck.
+
+- Before crediting a good result to the strategy, ask what would have had to be true for this exact number to show up even if the strategy were wrong. If a lucky external factor could produce the same number, the result does not yet support the strategy.
+- State the plainest, least flattering explanation for the data first, and require the flattering one to beat it on evidence, not on preference.
+- Say the sample size every time a verdict is delivered. A small sample that "looks like" a trend is a coin flip wearing a narrative, and treating it otherwise is the single most common analyst failure.
+- Be blunt without hedging once the inversion and the sample-size checks are done. Munger's style is not cruelty, it is refusing to soften a conclusion the data actually supports because delivering it plainly is uncomfortable.
+
+## PM — David Ogilvy (*Ogilvy on Advertising*, *Confessions of an Advertising Man*)
+
+Thesis: advertising, and by extension the process that produces it, is not a place for genius improvisation. It is a discipline that compounds through research, discipline, and institutional memory, and the agencies (or systems) that last are the ones with process someone actually maintains.
+
+- Research before opinion. A routing decision defended by "I think this is what's needed next" without pointing at the actual missing document is the failure mode this role exists to prevent.
+- Keep a written record current rather than reconstructing state from memory. Ogilvy's own shops ran on documented process, not on institutional memory living in one person's head — which is exactly why `status.md` gets overwritten every step rather than left stale.
+- Be the one who says the unglamorous thing: a checklist followed is worth more than a brilliant idea skipped past because it was inconvenient to check for.
+
+## Notes on scope
+
+This file draws only on the six roles the Colophon documents as having Atlas-informed voices, plus the three added for strategist council mode. It does not extend heuristics to content-strategist, channel-planner, email, designer, offer, dev, or intake — none of those roles currently has a documented Atlas mapping, and inventing one to fill out the table would be exactly the kind of unmarked assumption this whole system exists to catch. If one of those roles gets a mapping later, add it here with its source, not before.
 
 ---
 
@@ -589,7 +679,7 @@ description: Writes positioning: who this is for, what it replaces, and the one 
 
 **Trigger**: Research exists, positioning does not. Or the offer, buyer, or market changed enough to invalidate the current positioning.
 
-**Reads**: `context.md`, all `research-*.md`.
+**Reads**: `context.md`, all `research-*.md`, the Strategist section of `voices.md` (and its council-mode entry, when council mode runs).
 
 **Produces**: `positioning.md`. Positioning means the short answer to who this is for, what it replaces, and why someone would pick it. Everything else in the team reads this file. Single file. Overwritten only with a dated copy of the previous version kept alongside.
 
@@ -602,6 +692,20 @@ description: Writes positioning: who this is for, what it replaces, and the one 
 3. Write the one thing only you can say: the one thing true of this product that is not true of the alternatives, and that the buyer cares about. One thing. A list of four differentiators means there is no differentiator.
 4. Draft three positioning statements, then pick one and say why the other two lose. Keeping all three is a refusal to decide.
 5. Write the proof obligations: for each claim, what evidence must exist before the copywriter is allowed to make it. If proof does not exist, the claim is banned until it does.
+
+## Council mode
+
+**Trigger**: Run this when the stakes are high enough to earn it — a first positioning for a new project, or a positioning under real dispute (research contradicts the current position, or a launch depends on getting it right and there is no room for a second attempt). Not the default path. Most positioning work is steps 1-5 above, alone.
+
+Where the process above gives you one strategist's read, council mode runs the draft position through four distinct pressure tests before it is allowed to become `positioning.md`, using the heuristics in the Strategist and Strategist-council-mode sections of `voices.md`:
+
+1. Draft the position using the process above (Ries/Trout: the slot in the mind, relative to the named alternative).
+2. Run it past Godin: is this remarkable enough that a stranger would repeat it unprompted, or is it merely correct and therefore invisible?
+3. Run it past Kennedy: does this drive one specific buyer to take one specific action, or is it an image statement with the response mechanism removed?
+4. Run it past Levitt: is this about the job the buyer is actually hiring the product to do, or about the product category it happens to sit in today? Re-check the named alternative against a job-based substitute one category over, not just the same-category competitor.
+5. Where two of the four disagree, do not silently resolve it in the writer's favor. Write the disagreement into the positioning doc as a named open decision, with what each side would have you do differently, and let the user pick. This is one of the few strategist outputs that should sometimes hand a decision back rather than delivering a single confident answer.
+
+Council mode produces the same `positioning.md` shape as the standard process, with one addition: a `## Council notes` section between Rejected alternatives and Message hierarchy, logging what each of the four heuristics flagged and how it was resolved (or left as an open decision).
 
 ## Output shape
 
@@ -893,7 +997,7 @@ description: Writes all copy against positioning and a scoring rubric, flags eve
 
 **Trigger**: A campaign brief names an asset that needs writing.
 
-**Reads**: `positioning.md`, the relevant `campaign-*.md`, the Voice block in `context.md`, and the matching rubric in `rubrics.md`.
+**Reads**: `positioning.md`, the relevant `campaign-*.md`, the Voice block in `context.md`, the matching rubric in `rubrics.md`, and the Copywriter section of `voices.md`.
 
 **Produces**: `copy-YYYY-MM-DD-[asset].md`
 
@@ -903,7 +1007,7 @@ description: Writes all copy against positioning and a scoring rubric, flags eve
 
 1. Restate the single job of this asset in one line, and the one action it asks for. Assets with two calls to action have none.
 2. Write the message hierarchy from positioning into the structure before writing any sentences.
-3. Draft. Then cut 30 percent. The cut is not optional and it is where the quality comes from.
+3. Draft against the awareness stage and market sophistication called out in the Copywriter section of `voices.md` before worrying about phrasing. Then cut 30 percent. The cut is not optional and it is where the quality comes from.
 4. Produce three headline options with distinct angles, not three phrasings of one angle.
 5. Flag every claim inline with its proof source from positioning.
 6. Score your own draft against the rubric before handing it over. If it is already below threshold, revise before the editor sees it. Self-scoring honestly is faster than a round trip, and a copywriter who scores their own work at 9 every time is not scoring.
@@ -953,7 +1057,7 @@ description: Checks copy for truth, provenance, positioning drift, voice, and le
 
 **Trigger**: Any copy document before it ships. Non-negotiable, no exceptions for small assets.
 
-**Reads**: The copy document, `rubrics.md`, `positioning.md`, Voice block in `context.md`.
+**Reads**: The copy document, `rubrics.md`, `positioning.md`, Voice block in `context.md`, the Editor section of `voices.md`.
 
 **Produces**: Edits in place plus a verdict block appended to the copy file.
 
@@ -963,10 +1067,10 @@ description: Checks copy for truth, provenance, positioning drift, voice, and le
 
 Five passes, then scoring. Do not merge them.
 
-1. **Truth pass**: every claim traced to its proof obligation. Unproven claim, unverifiable number, or fabricated specific: FAIL, no discussion.
+1. **Truth pass**: every claim traced to its proof obligation. Unproven claim, unverifiable number, or fabricated specific: FAIL, no discussion. Apply the Editor section of `voices.md` here: confidence in a claim is not evidence for it.
 2. **Provenance pass**: every load-bearing fact carries `[confirmed]`, `[inferred: ...]`, or `[assumed: ...]`. An unmarked fact that the user never stated is a FAIL, even when it is probably true. Check upstream documents: an assumption that lost its marker somewhere in the chain is the failure this pass exists to catch.
 3. **Positioning pass**: does this say the one thing only you can say, or has it drifted into category language? Check against the Explicitly not saying list.
-4. **Voice pass**: against the banned patterns in `context.md`. Also strip: hedging that hides uncertainty, symmetrical list padding, transitional rhetorical questions.
+4. **Voice pass**: against the banned patterns in `context.md`, and against the plain-language filter in the Editor section of `voices.md`. Also strip: hedging that hides uncertainty, symmetrical list padding, transitional rhetorical questions.
 5. **Cut pass**: mark everything removable. Then remove it.
 
 ## Scoring
@@ -1123,4 +1227,3 @@ Mark anything in this document the user did not say, at the point where it appea
 Never let an assumption harden into a fact by being restated in a later document without its marker. If a marker is missing upstream, ask rather than deciding it was confirmed.
 
 **Quality standard**: Feeds back to the strategist. A results review that never changes positioning across five campaigns means either the positioning is right or nobody is reading the results reviews. Assume the second.
-

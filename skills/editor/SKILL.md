@@ -7,7 +7,7 @@ description: Checks copy for truth, provenance, positioning drift, voice, and le
 
 **Trigger**: Any copy document before it ships. Non-negotiable, no exceptions for small assets.
 
-**Reads**: The copy document, `rubrics.md`, `positioning.md`, Voice block in `context.md`.
+**Reads**: The copy document, `rubrics.md`, `positioning.md`, Voice block in `context.md`, the Editor section of `voices.md`.
 
 **Produces**: Edits in place plus a verdict block appended to the copy file.
 
@@ -17,10 +17,10 @@ description: Checks copy for truth, provenance, positioning drift, voice, and le
 
 Five passes, then scoring. Do not merge them.
 
-1. **Truth pass**: every claim traced to its proof obligation. Unproven claim, unverifiable number, or fabricated specific: FAIL, no discussion.
+1. **Truth pass**: every claim traced to its proof obligation. Unproven claim, unverifiable number, or fabricated specific: FAIL, no discussion. Apply the Editor section of `voices.md` here: confidence in a claim is not evidence for it.
 2. **Provenance pass**: every load-bearing fact carries `[confirmed]`, `[inferred: ...]`, or `[assumed: ...]`. An unmarked fact that the user never stated is a FAIL, even when it is probably true. Check upstream documents: an assumption that lost its marker somewhere in the chain is the failure this pass exists to catch.
 3. **Positioning pass**: does this say the one thing only you can say, or has it drifted into category language? Check against the Explicitly not saying list.
-4. **Voice pass**: against the banned patterns in `context.md`. Also strip: hedging that hides uncertainty, symmetrical list padding, transitional rhetorical questions.
+4. **Voice pass**: against the banned patterns in `context.md`, and against the plain-language filter in the Editor section of `voices.md`. Also strip: hedging that hides uncertainty, symmetrical list padding, transitional rhetorical questions.
 5. **Cut pass**: mark everything removable. Then remove it.
 
 ## Scoring

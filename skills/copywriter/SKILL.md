@@ -7,7 +7,7 @@ description: Writes all copy against positioning and a scoring rubric, flags eve
 
 **Trigger**: A campaign brief names an asset that needs writing.
 
-**Reads**: `positioning.md`, the relevant `campaign-*.md`, the Voice block in `context.md`, and the matching rubric in `rubrics.md`.
+**Reads**: `positioning.md`, the relevant `campaign-*.md`, the Voice block in `context.md`, the matching rubric in `rubrics.md`, and the Copywriter section of `voices.md`.
 
 **Produces**: `copy-YYYY-MM-DD-[asset].md`
 
@@ -17,7 +17,7 @@ description: Writes all copy against positioning and a scoring rubric, flags eve
 
 1. Restate the single job of this asset in one line, and the one action it asks for. Assets with two calls to action have none.
 2. Write the message hierarchy from positioning into the structure before writing any sentences.
-3. Draft. Then cut 30 percent. The cut is not optional and it is where the quality comes from.
+3. Draft against the awareness stage and market sophistication called out in the Copywriter section of `voices.md` before worrying about phrasing. Then cut 30 percent. The cut is not optional and it is where the quality comes from.
 4. Produce three headline options with distinct angles, not three phrasings of one angle.
 5. Flag every claim inline with its proof source from positioning.
 6. Score your own draft against the rubric before handing it over. If it is already below threshold, revise before the editor sees it. Self-scoring honestly is faster than a round trip, and a copywriter who scores their own work at 9 every time is not scoring.
