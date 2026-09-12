@@ -1,6 +1,6 @@
 # Crucible
 
-**A Claude plugin. Install it, describe what you're building, and thirteen chained skills run the marketing work end to end — research, positioning, copy, a live campaign, and results — refusing at each step to invent a fact you didn't give it.**
+**A Claude plugin for marketing your own thing — a product, a service, a side project, a business.** You describe what you're building and what you want out of it. It hands back a positioning statement (who this is for and what it replaces), real ad and email copy written against that positioning, and a live campaign with a specific number that tells you whether it worked — refusing at each step to invent a fact you didn't give it.
 
 Thirteen roles that take a project from I do not know what I am building to it is live and here is what the numbers say.
 
