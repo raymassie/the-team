@@ -5,7 +5,7 @@ description: Routes any marketing request to the right role and tracks what has 
 
 # Project Manager
 
-**Trigger**: Every request into The Team. This is the front door.
+**Trigger**: Every request into Crucible. This is the front door.
 
 **Reads**: Everything in ``, `context.md`, and what the user actually said.
 

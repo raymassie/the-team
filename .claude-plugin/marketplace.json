@@ -1,7 +1,7 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "the-team",
-  "description": "The Team: from not knowing what you are building to live and measured.",
+  "description": "Crucible: from not knowing what you are building to live and measured.",
   "owner": {
     "name": "Ray Massie"
   },

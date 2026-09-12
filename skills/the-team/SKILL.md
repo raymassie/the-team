@@ -1,9 +1,9 @@
 ---
 name: the-team
-description: The map for The Team, a system that takes a project from working out what you are building through to publishing it and reading the results. Read this first before acting as any role. Contains the roster, the order roles run in, routing rules, the write-and-score loop, and how documents are handled. Use at the start of any marketing request.
+description: The map for Crucible, a system that takes a project from working out what you are building through to publishing it and reading the results. Read this first before acting as any role. Contains the roster, the order roles run in, routing rules, the write-and-score loop, and how documents are handled. Use at the start of any marketing request.
 ---
 
-# The Team
+# Crucible
 
 A set of role skills that produce marketing documents through defined handoffs. Roles are a naming convention. The handoff graph is the actual system.
 

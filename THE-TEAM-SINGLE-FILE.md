@@ -1,4 +1,4 @@
-# The Team, single file
+# Crucible, single file
 
 Every skill in one file, for tools that cannot install Claude plugins. Generated from the skills directory. If it disagrees with the files in skills/, the files win.
 
@@ -6,10 +6,10 @@ Every skill in one file, for tools that cannot install Claude plugins. Generated
 
 ---
 name: the-team
-description: The map for The Team, a system that takes a project from working out what you are building through to publishing it and reading the results. Read this first before acting as any role. Contains the roster, the order roles run in, routing rules, the write-and-score loop, and how documents are handled. Use at the start of any marketing request.
+description: The map for Crucible, a system that takes a project from working out what you are building through to publishing it and reading the results. Read this first before acting as any role. Contains the roster, the order roles run in, routing rules, the write-and-score loop, and how documents are handled. Use at the start of any marketing request.
 ---
 
-# The Team
+# Crucible
 
 A set of role skills that produce marketing documents through defined handoffs. Roles are a naming convention. The handoff graph is the actual system.
 
@@ -398,7 +398,7 @@ description: Routes any marketing request to the right role and tracks what has 
 
 # Project Manager
 
-**Trigger**: Every request into The Team. This is the front door.
+**Trigger**: Every request into Crucible. This is the front door.
 
 **Reads**: Everything in ``, `context.md`, and what the user actually said.
 
