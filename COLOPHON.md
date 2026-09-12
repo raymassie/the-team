@@ -6,7 +6,7 @@ How The Team was built, what it draws from, and who deserves credit.
 
 ## Concept and design
 
-The Team was designed and built by Ray Massie in a single session on September 6–7, 2026, with Watson (Claude Sonnet 4.6) as collaborator. The core architectural decision — handoff contracts rather than personas, with defined reads, produces, and refuses-when for each role — emerged from the observation that most AI marketing skill packs are prompt libraries wearing agent clothing. The governance layer (provenance markers, refusal conditions that redirect rather than reject, a scored grading loop, a three-round cap) was designed to prevent the failure mode where a gap gets filled by a guess, the guess reads as fact in the next document, and by the third step the whole chain is built confidently on something nobody ever said.
+Crucible was designed and built by Ray Massie in a single session on September 6–7, 2026, with Watson (Claude Sonnet 4.6) as collaborator. The core architectural decision — handoff contracts rather than personas, with defined reads, produces, and refuses-when for each role — emerged from the observation that most AI marketing skill packs are prompt libraries wearing agent clothing. The governance layer (provenance markers, refusal conditions that redirect rather than reject, a scored grading loop, a three-round cap) was designed to prevent the failure mode where a gap gets filled by a guess, the guess reads as fact in the next document, and by the third step the whole chain is built confidently on something nobody ever said.
 
 ---
 
@@ -68,7 +68,7 @@ The gap identified: no repository in the ecosystem marks confirmed facts versus 
 
 ## Tools
 
-Built with Claude Code (claude-sonnet-4-6). Repository at [github.com/raymassie/the-team](https://github.com/raymassie/the-team).
+Built with Claude Code (claude-sonnet-4-6). Repository at [github.com/raymassie/crucible](https://github.com/raymassie/crucible).
 
 ---
 

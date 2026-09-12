@@ -1,4 +1,4 @@
-# The Team
+# Crucible
 
 Thirteen roles that take a project from I do not know what I am building to it is live and here is what the numbers say.
 
@@ -12,8 +12,8 @@ Most AI marketing prompt packs are personas: files that say you are a seasoned C
 
 Open Claude Code in any folder and run these two commands:
 
-    /plugin marketplace add raymassie/the-team
-    /plugin install the-team@the-team
+    /plugin marketplace add raymassie/crucible
+    /plugin install crucible@the-team
 
 The first adds this repo as a source. The second installs the plugin from it. Restart is not needed. To confirm it worked, run `/plugin` and look for the-team in the installed list.
 
@@ -21,7 +21,7 @@ To update later, `/plugin marketplace update the-team`. To remove it, `/plugin u
 
 ## Install in the Claude apps
 
-Sidebar, then Customize, then Plugins, then Add Marketplace. Paste `raymassie/the-team` and click Sync. The plugin appears in the list. Click Install.
+Sidebar, then Customize, then Plugins, then Add Marketplace. Paste `raymassie/crucible` and click Sync. The plugin appears in the list. Click Install.
 
 ## Using it
 
