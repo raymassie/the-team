@@ -1,5 +1,7 @@
 # Crucible
 
+**A Claude plugin. Install it, describe what you're building, and thirteen chained skills run the marketing work end to end — research, positioning, copy, a live campaign, and results — refusing at each step to invent a fact you didn't give it.**
+
 Thirteen roles that take a project from I do not know what I am building to it is live and here is what the numbers say.
 
 It starts by asking what you do, then what you want out of it. Money is one valid answer. Free equipment, credibility, an audience, a portfolio piece, or just enjoying it are equally valid, and each one changes what the rest of the work should be. From there it works out what is missing, in what order, and does that instead of whatever you asked for.
